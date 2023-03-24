@@ -10,4 +10,7 @@ mobile application through socket communication.
 Application was build in JAVA & XML. The UI was kept really simple and Java concepts of Threading and Socket programming were used.
 
 # Backend
-Python server was used in the backend that acted as a bridge between the app and the pi to control the lock.
+For the backend, we implemented a server-client model using sockets. We created a central server that connected our client application to the door lock. Whenever a request was made from the client application, a signal was sent to the Raspberry Pi to open the door lock upon successful verification.
+
+# hardware
+For the hardware part, we used a Raspberry Pi along with a solenoid lock. The Raspberry Pi waited for a signal from the server, and on successful reception of the signal, it sent a signal to the solenoid lock to open it. The Raspberry Pi could be replaced with a cheaper NodeMCU in future updates of the project.
